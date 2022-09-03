@@ -4,27 +4,6 @@ Recently there was a new vulnerability in log4j, a java logging library that is 
 
 In this repository we have made and example vulnerable application and proof-of-concept (POC) exploit of it.
 
-
-A video showing the exploitation process
-----------------------------------------
-
-Vuln Web App:
-
-https://user-images.githubusercontent.com/87979263/146113359-20663eaa-555d-4d60-828d-a7f769ebd266.mp4
-
-<br>
-
-Ghidra (Old script):
-
-https://user-images.githubusercontent.com/87979263/145728478-b4686da9-17d0-4511-be74-c6e6fff97740.mp4
-
-<br>
-
-Minecraft PoC (Old script):
-
-https://user-images.githubusercontent.com/87979263/145681727-2bfd9884-a3e6-45dd-92e2-a624f29a8863.mp4
-
-
 Proof-of-concept (POC)
 ----------------------
 
@@ -62,21 +41,6 @@ This script will setup the HTTP server and the LDAP server for you, and it will 
 
 <br>
 
-
-Our vulnerable application
---------------------------
-
-We have added a Dockerfile with the vulnerable webapp. You can use this by following the steps below:
-```c
-1: docker build -t log4j-shell-poc .
-2: docker run --network host log4j-shell-poc
-```
-Once it is running, you can access it on localhost:8080
-
-If you would like to further develop the project you can use Intellij IDE which we used to develop the project. We have also included a `.idea` folder where we have configuration files which make the job a bit easier. You can probably also use other IDE's too.
-
-<br>
-
 Getting the Java version.
 --------------------------------------
 
@@ -100,10 +64,3 @@ java version "1.8.0_20"
 Java(TM) SE Runtime Environment (build 1.8.0_20-b26)
 Java HotSpot(TM) 64-Bit Server VM (build 25.20-b23, mixed mode)
 ```
-
-Disclaimer
-----------
-This repository is not intended to be a one-click exploit to CVE-2021-44228. The purpose of this project is to help people learn about this awesome vulnerability, and perhaps test their own applications (however there are better applications for this purpose, ei: [https://log4shell.tools/](https://log4shell.tools/)).
-
-Our team will not aid, or endorse any use of this exploit for malicious activity, thus if you ask for help you may be required to provide us with proof that you either own the target service or you have permissions to pentest on it.
-
